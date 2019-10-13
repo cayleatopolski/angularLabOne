@@ -1,33 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>To Do List</title>
-  </head>
-  <body>
-    <main>
-      <header>
-        <h1>TO-DO List</h1>
-        <p>A place to store your to-do's</p>
-      </header>
-      <input type="text" placeholder="Filter your to-do's" />
-      <section id="toDoItems">
-        <ol>
-          <li *ngFor="let todo of toDoList; index as i">
-            <div class="Todo_Item">
-              <button class="taskBtn" *ngIf="!todo.completed">Complete</button>
-              <p [ngClass]="{ taskCompleted: todo.completed }">
-                {{ todo.task }}
-              </p>
-              <i class="fas fa-times"></i>
-            </div>
-          </li>
-        </ol>
-      </section>
-      <input type="text" placeholder="Add your to-do" />
-      <button id="add">Add</button>
-    </main>
-  </body>
-</html>
+<main>
+  <header>
+    <h1>TO-DO List</h1>
+    <p>A place to store your to-do's</p>
+  </header>
+  <input type="text" placeholder="Filter your to-do's" />
+  <section id="toDoItems">
+    <ol>
+      <li *ngFor="let todo of toDoList; index as i">
+        <div class="Todo_Item">
+          <button class="taskBtn" *ngIf="!todo.completed">Complete</button>
+          <p [ngClass]="{ taskCompleted: todo.completed }">
+            {{ todo.task }}
+          </p>
+          <i class="fas fa-times"></i>
+        </div>
+      </li>
+    </ol>
+  </section>
+  <input type="text" placeholder="Add your to-do" />
+  <button id="add">Add</button>
+</main>
